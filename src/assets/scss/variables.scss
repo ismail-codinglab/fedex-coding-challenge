@@ -1,0 +1,80 @@
+$color-success: #1cd49c;
+$color-primary: #1cd49c;
+$color-primary-transparent: rgba(28, 212, 156, 0.15);
+$color-primary-light: #3ee5b2;
+$color-secondary: #223b55;
+$color-secondary-light: #315479;
+$color-danger: #fc0883;
+$color-dark-transparent: rgba(97, 116, 135, 0.3);
+$color-danger-light: #fd3a9c;
+$color-danger-transparent: rgba(252, 8, 131, 0.15);
+$color-warning: #daae10;
+$color-warning-light: #ffa033;
+$color-info: #1684f1;
+$color-info-light: #469df4;
+$color-dark: #617487;
+$color-dark-light: #7b8ea0;
+$color-light: #eef4f9;
+$font-family-regular: 'Montserrat-Regular';
+$font-family-medium: 'Montserrat-Medium';
+$font-family-bold: 'Montserrat-SemiBold';
+$backdrop-modal-color: rgb(50, 73, 96, 0.9);
+$color-body-font: #223b55;
+$color-blue-light: #f6f9fc;
+$font-awesome-free-icon: 'Font Awesome 5 Free';
+$color-shadow: rgba(0, 0, 0, 0.2);
+$color-white: #fff;
+$border-color: #d4dbe0;
+$hover-color: rgb(238, 244, 249, 0.5);
+
+$base-font-size: 16px;
+$transparent-dark-text: rgba(34, 59, 85, 0.1);
+
+// Variables below from here are from bootstrap version 4.4.1
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
+
+$theme-colors: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'success': $color-success,
+  'info': $color-info,
+  'warning': $color-warning,
+  'danger': $color-danger,
+  'light': $color-light,
+  'dark': $color-dark,
+);

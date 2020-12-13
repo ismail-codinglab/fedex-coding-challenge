@@ -1,0 +1,51 @@
+<form [formGroup]="searchForm" autocomplete="off">
+  <div class="form-group">
+    <label for="search" class="font-weight-bold"> Search your giphy image here: </label>
+    <input
+      type="text"
+      id="search"
+      data-testid="search-input"
+      placeholder="Search"
+      class="form-control"
+      formControlName="search"
+    />
+    <div *ngIf="searchControl.invalid && (searchControl.dirty || searchControl.touched)" class="alert alert-danger">
+      <div *ngIf="searchControl.errors.badWord" data-testid="search-error-badword">
+        Hey! Be nice. Try a different search term
+      </div>
+    </div>
+  </div>
+</form>
+
+<h1 class="pt-4" data-testid="search-empty-state" *ngIf="!loading && gifs?.length == 0">No results found</h1>
+<h1 class="pt-4" data-testid="search-placeholder" *ngIf="loading == undefined">Your results will be here</h1>
+<h1 class="pt-4" data-testid="search-loading" *ngIf="loading">Loading...</h1>
+
+<div class="content">
+  <div *ngIf="gifs?.length && !loading" fxLayout="row wrap">
+    <mat-card
+      fxFlex
+      fxShrink="1"
+      flex-basis="200px"
+      fxGrow="5"
+      *ngFor="let gif of gifs"
+      data-testid="search-result-item"
+    >
+      <img mat-card-image class="card-img-top" [src]="gif.images.preview_gif.url" alt="Card image cap" />
+    </mat-card>
+    <div class="justify-content-center d-flex pt-4 w-100">
+      <ngb-pagination
+        class="d-inline-block"
+        data-testid="search-pagination"
+        [collectionSize]="pagination.totalCount"
+        [(page)]="pagination.currentPage"
+        [pageSize]="limit"
+        [maxSize]="10"
+        [rotate]="true"
+        [ellipses]="true"
+        [boundaryLinks]="false"
+        (pageChange)="changedPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

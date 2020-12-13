@@ -1,0 +1,205 @@
+/* bootstrap styles */
+@import 'assets/scss/bootstrap.scss';
+@import 'assets/scss/variables.scss';
+@import '~@ng-select/ng-select/themes/default.theme.css';
+@import '~devicon-2.2/devicon.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import 'assets/scss/text';
+@import 'assets/fonts/fonts.css';
+@import 'assets/scss/components/custom-material';
+
+//components styles
+@import 'assets/scss/components/modal-dialog';
+
+/* 'ng-select' module styling to match website styling */
+
+/* typography */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-size: $base-font-size;
+  color: $color-body-font;
+  background-color: $color-light;
+  font-family: $font-family-regular;
+
+  h1 {
+    font-size: 33px;
+    font-weight: normal;
+    line-height: 56px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 26px;
+    font-family: $font-family-bold;
+    line-height: 46px;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 20px;
+    font-family: $font-family-bold;
+    line-height: 37px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: $font-family-bold;
+    line-height: 31px;
+  }
+
+  small {
+    font-size: 0.813em;
+  }
+
+  label {
+    margin-bottom: 1rem;
+  }
+
+  .optional {
+    font-size: 0.9rem;
+  }
+}
+
+// hide scroll when use stepper
+.hide-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div.ng-select-container {
+  border: 2px solid #d3e0f3 !important;
+}
+
+.ng-select-opened div.ng-select-container {
+  border: 2px solid #a1cdff !important;
+}
+
+/* form error handling styling */
+
+.alert.alert-danger {
+  padding: 0.4rem;
+  margin-top: 10px;
+}
+
+.toast-message {
+  font-weight: 500;
+}
+
+/* tooltip */
+
+.tooltip {
+  box-shadow: 0 0 10px #6b6b6b;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.tooltip-inner {
+  font-size: 14px;
+}
+
+/* ng5-slider styling */
+
+.ng5-slider .ng5-slider-pointer {
+  box-shadow: 0 1px 2px #c5c5c5;
+  outline: none;
+}
+
+.ng5-slider .ng5-slider-pointer:active {
+  box-shadow: 0 1px 6px #b0b0b0;
+}
+
+.ng5-slider.horizontal .ng5-slider-pointer {
+  width: 25px !important;
+  height: 25px !important;
+  top: -11px !important;
+}
+
+.ng5-slider .ng5-slider-pointer::after {
+  display: none !important;
+}
+
+.job-save-actions .tooltip {
+  margin-top: -5px;
+}
+
+.modal-footer .btn-outline-secondary {
+  background: #afafaf;
+  border: 1px solid #989898;
+}
+
+@media (min-width: 640px) {
+  .modal-dialog.modal-lg {
+    max-width: 800px;
+    min-width: 800px;
+  }
+}
+
+.info-report {
+  padding: 2px 5px;
+  margin-left: 8px;
+  border: 1px solid #bdbbbb;
+  border-radius: 50%;
+  font-size: 13px;
+  background: #eaf3fc;
+  width: 22px;
+}
+
+.user-panel {
+  position: relative !important;
+}
+
+.drop-zone {
+  border: dotted 2px lightgray;
+  padding: 5.25rem;
+  text-align: center;
+  border-radius: 8px;
+  background: aliceblue;
+}
+
+.drop-zone i {
+  font-size: 32px;
+}
+
+.invalid-drag {
+  border: dotted 3px red;
+}
+
+.valid-drag {
+  border: dotted 3px green;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.mat-menu-panel {
+  background: $color-white !important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important;
+  position: relative;
+  min-width: 12.5rem !important;
+
+  button:focus,
+  button:active:focus,
+  button.active:focus {
+    outline: none !important;
+    outline-style: none !important;
+  }
+
+  .mat-menu-item {
+    padding-left: 1rem;
+    font-size: 1rem !important;
+    font-family: $font-family-regular !important;
+  }
+
+  .mat-menu-item:hover {
+    color: $color-primary;
+    background-color: $color-blue-light;
+  }
+}

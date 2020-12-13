@@ -1,0 +1,33 @@
+@mixin transform($property) {
+  -o-transform: $property;
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin overflow($property) {
+  -webkit-overflow-scrolling: $property;
+  -ms-overflow-style: $property;
+  overflow: $property;
+}
+
+@mixin transition($properties...) {
+  -o-transition: $properties;
+  -webkit-transition: $properties;
+  -moz-transition: $properties;
+  transition: $properties;
+}
+
+@mixin user-select($property) {
+  -webkit-user-select: $property;
+  -moz-user-select: $property;
+  -ms-user-select: $property;
+  user-select: $property;
+}
+
+@mixin box-sizing($property) {
+  -moz-box-sizing: $property;
+  -webkit-box-sizing: $property;
+  box-sizing: $property;
+}

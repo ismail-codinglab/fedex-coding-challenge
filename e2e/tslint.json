@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-unused-expression": false
+  },
+  "extends": "../tslint.json"
+}

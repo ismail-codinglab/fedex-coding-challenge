@@ -1,0 +1,196 @@
+@import 'src/assets/scss/variables';
+@import '../breakpoints';
+
+.mat-button-focus-overlay {
+  background-color: transparent !important;
+}
+
+.mat-button:hover {
+  color: $color-primary;
+  background-color: transparent !important;
+}
+
+// style for the snack bar service/component
+.snackBar {
+  &-primary {
+    div {
+      color: $color-body-font;
+    }
+
+    background-color: $color-primary !important;
+  }
+
+  &-secondary {
+    div {
+      color: white;
+    }
+
+    background-color: $color-secondary !important;
+  }
+
+  &-danger {
+    div {
+      color: white;
+    }
+
+    background-color: $color-danger !important;
+  }
+
+  &-warning {
+    div {
+      color: white;
+    }
+
+    background-color: $color-warning !important;
+  }
+
+  &-info {
+    div {
+      color: white;
+    }
+
+    background-color: $color-info !important;
+  }
+
+  &-dark {
+    div {
+      color: white;
+    }
+
+    background-color: $color-dark !important;
+  }
+
+  &-light {
+    div {
+      color: $color-body-font;
+    }
+
+    background-color: #f6f9fc !important;
+  }
+}
+
+// custom styles for the mat-tab-group
+.mat-tab-label.mat-tab-label-active {
+  color: $color-primary !important;
+}
+
+.mat-tab-labels {
+  display: unset !important;
+}
+
+.mat-tab-label {
+  opacity: 1 !important;
+  font-size: 16px !important;
+  font-family: $font-family-bold !important;
+  color: $color-dark !important;
+}
+
+.mat-tab-label-container {
+  padding-left: map-get($map: $spacers, $key: 5);
+}
+
+@include media-breakpoint-down(md) {
+  .mat-tab-label-container {
+    padding-left: unset;
+  }
+
+  .mat-tab-group.mat-primary .mat-ink-bar {
+    display: none;
+  }
+}
+
+// mat-menu
+.mat-menu-panel {
+  max-width: none !important;
+}
+
+.mat-menu-panel .mat-menu-item {
+  color: $color-dark;
+}
+
+.mat-menu-panel .mat-menu-item:hover {
+  font-family: $font-family-bold !important;
+  color: $color-body-font !important;
+  background-color: $hover-color !important;
+}
+
+// ui-pagination
+.page-item .page-link {
+  text-align: center;
+  border: unset;
+  //padding: 0.33rem 0.75rem;
+  max-width: 30px;
+  max-height: 30px;
+  font-family: $font-family-bold;
+  font-size: 1rem;
+  color: $color-secondary;
+  background-color: transparent;
+}
+
+.page-item {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $color-primary;
+  border-color: unset;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.page-item.disabled .page-link {
+  color: $border-color;
+  background-color: transparent;
+}
+
+.page-item .page-link[aria-label='Next'] {
+  span {
+    font-size: 0;
+
+    &::before {
+      content: '\f054';
+      font-size: 1rem;
+      font-family: $font-awesome-free-icon;
+      font-weight: 900;
+    }
+  }
+}
+
+.page-item .page-link[aria-label='Previous'] {
+  span {
+    font-size: 0;
+
+    &::before {
+      content: '\f053';
+      font-size: 1rem;
+      font-family: $font-awesome-free-icon;
+      font-weight: 900;
+    }
+  }
+}
+
+// expansion panel of language
+
+.mat-expansion-panel.custom {
+  box-shadow: unset !important;
+}
+
+.mat-expansion-panel-body {
+  padding: 0 16px 16px !important;
+}
+
+.mat-expansion-panel-header {
+  font-size: 1rem !important;
+  padding: 0 16px !important;
+}
+
+.mat-expansion-indicator::after {
+  padding: 5px !important;
+  margin-right: 3px !important;
+  border-width: 0 4px 4px 0 !important;
+  color: $color-primary;
+}

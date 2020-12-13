@@ -1,0 +1,101 @@
+@import 'variables';
+
+.text {
+  &-separator {
+    color: $color-dark;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid $color-dark;
+    }
+  }
+
+  &-link {
+    cursor: pointer;
+    color: $color-primary;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &-primary {
+    color: $color-primary !important;
+  }
+
+  &-danger {
+    color: $color-danger !important;
+  }
+
+  &-black {
+    color: black !important;
+  }
+
+  &-dark {
+    color: $color-dark !important;
+  }
+
+  &-info {
+    color: $color-info-light;
+  }
+
+  &-light {
+    color: $color-light !important;
+  }
+
+  &-small {
+    font-size: 13px;
+  }
+
+  &-bold {
+    font-family: $font-family-bold;
+  }
+
+  &-grey {
+    color: $color-dark-transparent;
+  }
+
+  &-regular {
+    font-family: $font-family-regular;
+  }
+
+  &-medium {
+    font-family: $font-family-medium;
+  }
+
+  &-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.header {
+  &-success {
+    // .header-success (helps with searching for this class)
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 56px;
+    color: $color-primary;
+  }
+
+  &-danger {
+    // .header-danger (helps with searching for this class)
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 56px;
+    color: $color-danger;
+  }
+
+  &-info {
+    // .header-info (helps with searching for this class)
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 56px;
+    color: $color-info-light;
+  }
+}
