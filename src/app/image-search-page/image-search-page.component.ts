@@ -28,8 +28,6 @@ export class ImageSearchPageComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  errorMessage: string;
-
   ngOnInit() {
     this.createForm();
     this.subscribeToSearch();
