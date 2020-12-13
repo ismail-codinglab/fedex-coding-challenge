@@ -42,3 +42,16 @@ If this one day becomes giphy v2 I would add:
 - Me
 
 Skill & knowledge wise you could also give me a hackerrank challenge ask about binary search, bit manipulation, sorting algorithms, prefix sum algorithm etc. I'd be happy to solve these.
+
+## Regarding bad words / profanity filter
+
+I could create a list of bad words and simply search for those in the query.
+
+However, what if they purposefully make typos? I could implement levenshtein's algorithm to fix it.
+
+However, what if they encrypted it like n00b? I could account for that in the levenshtein's algorithm and make the distance between 'o' and '0' zero
+
+However, what if they didn't mean to type in a bad word? Like `go to hell`?
+For this you really need to be context-aware, you could do it with AI to learn context, but even that is limited to the amount of context information you get.
+
+So I took the simple approach and integrated npm `bad-words` package :)
